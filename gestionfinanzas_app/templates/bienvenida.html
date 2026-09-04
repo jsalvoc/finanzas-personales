@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Bienvenida - {{ plataforma }}{% endblock %}
+
+{% block content %}
+<div class="p-4 mb-4 bg-white rounded-3 shadow-sm border">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <h1 class="display-6 fw-bold text-dark">Bienvenido a {{ plataforma }}</h1>
+            <p class="text-muted">Plataforma financiera para la gestión centralizada de presupuestos, movimientos y auditoría de datos históricos.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <span class="badge bg-primary fs-6">Versión {{ version }}</span>
+            <span class="badge {% if estado == 'Operativo' %}bg-success{% else %}bg-danger{% endif %} fs-6">
+                {{ estado }}
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm border-0 mb-4">
+    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+        <h5 class="mb-0 fw-bold">Últimos Movimientos Registrados</h5>
+        <span class="badge bg-secondary">Total: {{ total_operaciones }} operaciones</span>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID Transacción</th>
+                        <th>Descripción</th>
+                        <th>Clasificación</th>
+                        <th class="text-end">Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for movimiento in movimientos %}
+                    <tr>
+                        <td class="fw-bold">{{ movimiento.id_transaccion }}</td>
+                        <td>{{ movimiento.descripcion }}</td>
+                        <td>
+                            {% if movimiento.clasificacion == 'perdida' %}
+                                <span class="badge bg-danger">Pérdida</span>
+                            {% elif movimiento.clasificacion == 'costo' %}
+                                <span class="badge bg-info text-dark">Costo Operacional</span>
+                            {% else %}
+                                <span class="badge bg-secondary">Gasto Estándar</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-end fw-bold">${{ movimiento.monto }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4" class="text-center py-3 text-muted">No hay movimientos registrados.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
