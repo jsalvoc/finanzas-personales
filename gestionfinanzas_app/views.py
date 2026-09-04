@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-def bienvenida(request):
+def index(request):
     nombre_plataforma = "FinanzasCentral"
     version_api = 1.0
     sistema_activo = True
@@ -22,7 +22,7 @@ def bienvenida(request):
         'total_operaciones': total_operaciones,
     }
     
-    return render(request, 'bienvenida.html', contexto)
+    return render(request, 'index.html', contexto)
 
 def error_404(request, exception):
     contexto = {
