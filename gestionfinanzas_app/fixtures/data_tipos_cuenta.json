@@ -1,0 +1,50 @@
+[
+    {
+        "model": "gestionfinanzas_app.tipocuenta",
+        "pk": 1,
+        "fields": {
+            "codigo": "CTA-CORR",
+            "nombre": "Cuenta Corriente",
+            "descripcion": "Cuenta bancaria tradicional para operaciones diarias y pagos.",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    },
+    {
+        "model": "gestionfinanzas_app.tipocuenta",
+        "pk": 2,
+        "fields": {
+            "codigo": "CTA-VISTA",
+            "nombre": "Cuenta Vista / CuentaRUT",
+            "descripcion": "Cuenta de débito sin línea de sobregiro.",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    },
+    {
+        "model": "gestionfinanzas_app.tipocuenta",
+        "pk": 3,
+        "fields": {
+            "codigo": "CTA-AHORRO",
+            "nombre": "Cuenta de Ahorro / Inversión",
+            "descripcion": "Fondo destinado a ahorro programado o depósitos a plazo.",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    },
+    {
+        "model": "gestionfinanzas_app.tipocuenta",
+        "pk": 4,
+        "fields": {
+            "codigo": "EFECTIVO",
+            "nombre": "Billetera / Efectivo",
+            "descripcion": "Dinero disponible en efectivo para gastos menores.",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    }
+]

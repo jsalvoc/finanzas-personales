@@ -1,0 +1,41 @@
+[
+    {
+        "model": "gestionfinanzas_app.perfilacceso",
+        "pk": 1,
+        "fields": {
+            "codigo": "PERF-ADMIN",
+            "nombre": "Administrador Financiero",
+            "descripcion": "Control total de parámetros, auditoría y gestión de usuarios.",
+            "nivel_permiso": "TOTAL",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    },
+    {
+        "model": "gestionfinanzas_app.perfilacceso",
+        "pk": 2,
+        "fields": {
+            "codigo": "PERF-TITULAR",
+            "nombre": "Usuario Titular",
+            "descripcion": "Gestión de cuentas propias, presupuestos y registro diario de transacciones.",
+            "nivel_permiso": "LECTURA_ESCRITURA",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    },
+    {
+        "model": "gestionfinanzas_app.perfilacceso",
+        "pk": 3,
+        "fields": {
+            "codigo": "PERF-AUDITOR",
+            "nombre": "Auditor y Analista",
+            "descripcion": "Revisión de historial de auditoría, situaciones excepcionales e indicadores.",
+            "nivel_permiso": "SOLO_LECTURA",
+            "habilitado": true,
+            "created_at": "2026-10-16T09:00:00",
+            "updated_at": "2026-10-16T09:00:00"
+        }
+    }
+]

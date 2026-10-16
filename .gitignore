@@ -1,6 +1,23 @@
+# Ambientes virtuales
 ambiente/
 .venv/
+venv/
+env/
+
+# Variables de entorno
+.env
+.envrc
+
+# Archivos compilados de Python
 *.pyc
+*.pyo
+*.pyd
 **/__pycache__/
+
+# Base de datos local SQLite
 db.sqlite3
+db.sqlite3-journal
+
+# Editores / IDEs
 .vscode/
+.idea/
