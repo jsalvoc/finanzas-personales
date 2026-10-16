@@ -4,10 +4,6 @@ ambiente/
 venv/
 env/
 
-# Variables de entorno
-.env
-.envrc
-
 # Archivos compilados de Python
 *.pyc
 *.pyo
